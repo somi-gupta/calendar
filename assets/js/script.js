@@ -16,41 +16,44 @@ $(document).ready(function () {
     function timeTracker() {
         //get current number of hours.
         var timeNow = moment().hour();
-
         // loop over time blocks
         $(".time-block").each(function () {
-            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-
+            var blockTime = parseInt($(this).attr("id"));
             // To check the time and add the classes for background indicators
             if (blockTime < timeNow) {
-                $(this).removeClass("future");
-                $(this).removeClass("present");
-                $(this).addClass("past");
+                console.log("past " + blockTime < timeNow);
+                $(this).children(".row").children(".form-control").removeClass("future");
+                $(this).children(".row").children(".form-control").removeClass("present");
+                $(this).children(".row").children(".form-control").addClass("past");
             }
             else if (blockTime === timeNow) {
-                $(this).removeClass("past");
-                $(this).removeClass("future");
-                $(this).addClass("present");
+                console.log("present " + blockTime === timeNow);
+                $(this).children(".row").children(".form-control").removeClass("past");
+                $(this).children(".row").children(".form-control").removeClass("future");
+                $(this).children(".row").children(".form-control").addClass("present");
             }
             else {
-                $(this).removeClass("present");
-                $(this).removeClass("past");
-                $(this).addClass("future");
+                console.log("future " + blockTime >timeNow);
+                $(this).children(".row").children(".form-control").removeClass("present");
+                $(this).children(".row").children(".form-control").removeClass("past");
+                $(this).children(".row").children(".form-control").addClass("future");
 
             }
         })
     }
 
     // Get item from local storage if any
-    $("#0 .form-control").val(localStorage.getItem("0"));
-    $("#1 .form-control").val(localStorage.getItem("1"));
-    $("#2 .form-control").val(localStorage.getItem("2"));
-    $("#3 .form-control").val(localStorage.getItem("3"));
-    $("#4 .form-control").val(localStorage.getItem("4"));
-    $("#5 .form-control").val(localStorage.getItem("5"));
-    $("#6 .form-control").val(localStorage.getItem("6"));
-    $("#7 .form-control").val(localStorage.getItem("7"));
-    $("#8 .form-control").val(localStorage.getItem("8"));
+    $("#9 .form-control").val(localStorage.getItem("9"));
+    $("#10 .form-control").val(localStorage.getItem("10"));
+    $("#11 .form-control").val(localStorage.getItem("11"));
+    $("#12 .form-control").val(localStorage.getItem("12"));
+    $("#13 .form-control").val(localStorage.getItem("13"));
+    $("#14 .form-control").val(localStorage.getItem("14"));
+    $("#15 .form-control").val(localStorage.getItem("15"));
+    $("#16 .form-control").val(localStorage.getItem("16"));
+    $("#17 .form-control").val(localStorage.getItem("17"));
+    $("#18 .form-control").val(localStorage.getItem("18"));
+    $("#19 .form-control").val(localStorage.getItem("19"));
 
     timeTracker();
 })
