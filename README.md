@@ -1,3 +1,6 @@
+# Title
+Simple Calendar Application
+
 # Description
 This project is a simple calendar application that allows a user to save events for each hour of the day. The hours of the day are color coded indicate whether it is in the past (grey), present(red), or future(green).
 
