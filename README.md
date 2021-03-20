@@ -26,7 +26,7 @@ Code language used
 # Tests
 
 # Deployed application link
-Please navigate to the application via: https://github.com/somi-gupta/calendar 
+Please navigate to the application via: https://somi-gupta.github.io/calendar/
 
 # Screenshot of the deployed application
 ![Calendar](./assets/images/application-screenshot.jpg?raw=true)
