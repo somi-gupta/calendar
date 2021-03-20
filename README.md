@@ -31,6 +31,8 @@ Please navigate to the application via: https://github.com/somi-gupta/calendar
 # Screenshot of the deployed application
 ![Calendar](./assets/images/application-screenshot.jpg?raw=true)
 
+# License
+
 MIT License
 
 Copyright (c) [year] [fullname]
